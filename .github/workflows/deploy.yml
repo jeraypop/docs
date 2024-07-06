@@ -1,0 +1,45 @@
+name: deploy
+
+on:
+  push:
+    branches: ['main']
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: pnpm/action-setup@v4
+      - run: pnpm -v
+
+      - run: pnpm install
+
+      - run: pnpm -F @gkd-kit/docs exec tsx ./.vitepress/scripts/updateVersion.ts
+
+      - run: pnpm -F @gkd-kit/api run predocs:build
+      - run: pnpm -F @gkd-kit/docs run docs:build-mirror
+      
+      - name: Publish package
+        run: |
+          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+          pnpm -F @gkd-kit/docs publish --no-git-checks
+
+      - run: |
+          curl -X PUT 'https://registry-direct.npmmirror.com/@gkd-kit/docs/sync'
+          sleep 5
+          curl https://registry.npmmirror.com/@gkd-kit/docs/latest/files/package.json
+
+      - uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: gkd-docs
+          directory: ./docs/.vitepress/dist

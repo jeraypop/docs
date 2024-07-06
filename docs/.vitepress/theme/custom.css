@@ -1,0 +1,8 @@
+img.VPImage.logo {
+  border-radius: 50%;
+}
+
+.n-image-preview-toolbar .n-base-icon {
+  /* 避免被 vitepress 样式影响 */
+  box-sizing: content-box;
+}
