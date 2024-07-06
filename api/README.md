@@ -1,13 +1,13 @@
-# @gkd-kit/api
+# @jeraypop/api
 
 ## Install
 
 ```shell
-pnpm add @gkd-kit/api
+pnpm add @jeraypop/api
 ```
 
 ## Usage
 
 ```ts
-import type { RawSubscription } from '@gkd-kit/api';
+import type { RawSubscription } from '@jeraypop/api';
 ```

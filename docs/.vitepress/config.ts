@@ -3,7 +3,7 @@ import { mirror, transformHtml } from './plugins';
 import typedocSidebar from '../api/typedoc-sidebar.json';
 
 const logoUrl =
-  'https://registry.npmmirror.com/@gkd-kit/docs/0.0.1706371840771/files/.vitepress/dist/logo.svg';
+  'https://registry.npmmirror.com/@jeraypop/docs/0.0.1706371840771/files/.vitepress/dist/logo.svg';
 
 export default defineConfig({
   title: 'GKD',
@@ -59,7 +59,7 @@ export default defineConfig({
       },
     ],
     editLink: {
-      pattern: 'https://github.com/gkd-kit/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/jeraypop/docs/edit/main/docs/:path',
       text: '为此页提供修改建议',
     },
     search: {
@@ -78,7 +78,7 @@ export default defineConfig({
         },
       },
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/gkd-kit' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jeraypop' }],
     footer: {
       message: 'Released under the GPL-v3 License.',
       copyright: `Copyright © ${new Date().getFullYear()} GKD. All rights reserved`,

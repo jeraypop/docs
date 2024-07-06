@@ -12,7 +12,7 @@ const selfPkg: typeof selfPkgT = JSON.parse(
 
 const useMirror = process.env.MIRROR == `ON`;
 
-const mirrorBaseUrl = `https://registry.npmmirror.com/@gkd-kit/docs/${selfPkg.version}/files/.vitepress/dist`;
+const mirrorBaseUrl = `https://registry.npmmirror.com/@jeraypop/docs/${selfPkg.version}/files/.vitepress/dist`;
 
 const includesDynamicImport = /import\s*\(/;
 

@@ -3,7 +3,7 @@ import { defineComponent, h } from 'vue';
 import type { NImage as NImageT } from 'naive-ui/es/image';
 
 const mirrorHost = () => {
-  return `https://registry.npmmirror.com/@gkd-kit/assets/${ASSETS_VERSION}/files/assets/`;
+  return `https://registry.npmmirror.com/@jeraypop/assets/${ASSETS_VERSION}/files/assets/`;
 };
 const imgHost = 'https://a.gkd.li/';
 

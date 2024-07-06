@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@gkd-kit/selector':
+      '@jeraypop/selector':
         specifier: 0.2.2
         version: 0.2.2
       '@types/file-saver':
@@ -471,7 +471,7 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@gkd-kit/selector@0.2.2':
+  '@jeraypop/selector@0.2.2':
     resolution: {integrity: sha512-tZ20wrGOL8zJF7CsJZbp5tGhsQEqPo+YkbASIrBaK/ey5OcUzWWwtNixsWc2StrdYZaqAwsvl6KRX5WE288N7A==}
 
   '@iconify/types@2.0.0':
@@ -2063,7 +2063,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@gkd-kit/selector@0.2.2': {}
+  '@jeraypop/selector@0.2.2': {}
 
   '@iconify/types@2.0.0': {}
 

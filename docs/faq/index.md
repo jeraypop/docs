@@ -16,11 +16,11 @@ import ImageTable from '/.vitepress/components/ImageTable.vue';
 
 您需要解除这个限制, 到系统设置-应用管理-找到并点击GKD-右上角-允许受限制的设置
 
-以 LineageOS 20 为例, 下面为完整的解除限制流程截图, 此处感谢来自 [CyrusYip](https://github.com/gkd-kit/docs/issues/2) 的截图
+以 LineageOS 20 为例, 下面为完整的解除限制流程截图, 此处感谢来自 [CyrusYip](https://github.com/jeraypop/docs/issues/2) 的截图
 
 <ImageTable :images="[['0013.png', '0014.png', '0015.png', '0016.png'], ['0017.png', '0018.png']]" />
 
-如果您按照以上步骤设置后回到 无障碍列表 仍然提示不可用, 您可以试试 **重启手机**, 此解决方案来自 [Herobrine2005928](https://github.com/orgs/gkd-kit/discussions/433#discussioncomment-8899920)
+如果您按照以上步骤设置后回到 无障碍列表 仍然提示不可用, 您可以试试 **重启手机**, 此解决方案来自 [Herobrine2005928](https://github.com/orgs/jeraypop/discussions/433#discussioncomment-8899920)
 
 ## 后台运行 {#persistent}
 

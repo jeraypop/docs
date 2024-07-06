@@ -4,13 +4,13 @@
   "type": "module",
   "scripts": {
     "format": "prettier --cache --write --ignore-unknown .",
-    "dev": "pnpm build:api && pnpm -F @gkd-kit/docs docs:dev",
-    "build:api": "pnpm -F @gkd-kit/api predocs:build",
-    "build": "pnpm build:api && pnpm -F @gkd-kit/docs docs:build",
-    "preview": "pnpm -F @gkd-kit/docs docs:preview"
+    "dev": "pnpm build:api && pnpm -F @jeraypop/docs docs:dev",
+    "build:api": "pnpm -F @jeraypop/api predocs:build",
+    "build": "pnpm build:api && pnpm -F @jeraypop/docs docs:build",
+    "preview": "pnpm -F @jeraypop/docs docs:preview"
   },
   "dependencies": {
-    "@gkd-kit/selector": "0.2.2",
+    "@jeraypop/selector": "0.2.2",
     "@types/file-saver": "2.0.7",
     "@types/node": "20.14.9",
     "acorn-walk": "8.3.3",

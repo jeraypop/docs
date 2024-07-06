@@ -251,11 +251,11 @@ export interface RawCommonProps {
    *
    * 大多数情况下都能查询到, 在少数某些复杂结构下, 即使目标节点存在, 快速查询也不一定查询到
    *
-   * 比如 [Image &lt; \@View + View &gt;2 [text*='广告']](https://github.com/gkd-kit/subscription/blob/1ae87452d287b558f58f9c4e4448a3190e212ca1/src/apps/com.zidongdianji.ts#L26) 虽然符合快速查询的条件但是使用 `findAccessibilityNodeInfosByText("广告")` 并不能查询到节点
+   * 比如 [Image &lt; \@View + View &gt;2 [text*='广告']](https://github.com/jeraypop/subscription/blob/1ae87452d287b558f58f9c4e4448a3190e212ca1/src/apps/com.zidongdianji.ts#L26) 虽然符合快速查询的条件但是使用 `findAccessibilityNodeInfosByText("广告")` 并不能查询到节点
    *
    * 它是优点是快速, 因为遍历所有节点是一个耗时行为, 虽然多数情况下这种耗时较低
    *
-   * 但是在某些软件比如 哔哩哔哩 的开屏广告在这种耗时下延迟可达 1-2s, 这也是导致 [gkd-kit/gkd#60](https://github.com/gkd-kit/gkd/issues/60) 的原因
+   * 但是在某些软件比如 哔哩哔哩 的开屏广告在这种耗时下延迟可达 1-2s, 这也是导致 [jeraypop/gkd#60](https://github.com/jeraypop/gkd/issues/60) 的原因
    *
    * 如果你想对某个局部选择器关闭快速查找,只需要调整你的选择器的属性选择表达式的顺序使得它不符合快速查找的条件即可
    *
@@ -281,11 +281,11 @@ export interface RawCommonProps {
    * 
    * 在 matchRoot=false 的情况下, 你的匹配范围如下蓝框
    * 
-   * ![image](https://github.com/gkd-kit/gkd/assets/38517192/ec60677f-f0d7-4b0d-8ac2-56306852e4a0)
+   * ![image](https://github.com/jeraypop/gkd/assets/38517192/ec60677f-f0d7-4b0d-8ac2-56306852e4a0)
    * 
    * 而在 matchRoot=true 的情况下, 你的匹配范围如下蓝框
    * 
-   * ![image](https://github.com/gkd-kit/gkd/assets/38517192/33eb9029-c3c3-4a2e-ab60-a1f099371fef)
+   * ![image](https://github.com/jeraypop/gkd/assets/38517192/33eb9029-c3c3-4a2e-ab60-a1f099371fef)
    * 
    * @default false
    */

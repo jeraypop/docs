@@ -9,7 +9,7 @@ import ImageTable from '/.vitepress/components/ImageTable.vue';
 
 - 镜像加速 <ApkDownloadButton />
 
-- Github [releases](https://github.com/gkd-kit/gkd/releases/latest)
+- Github [releases](https://github.com/jeraypop/gkd/releases/latest)
 
 下载完毕后, 在您的 Android 手机上安装并打开
 
