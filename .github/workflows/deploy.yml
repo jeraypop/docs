@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: ['main']
+    branches: ['master']
 
 permissions:
   contents: write
@@ -22,24 +22,24 @@ jobs:
 
       - run: pnpm install
 
-      - run: pnpm -F @gkd-kit/docs exec tsx ./.vitepress/scripts/updateVersion.ts
+      - run: pnpm -F @jeraypop/docs exec tsx ./.vitepress/scripts/updateVersion.ts
 
-      - run: pnpm -F @gkd-kit/api run predocs:build
-      - run: pnpm -F @gkd-kit/docs run docs:build-mirror
+      - run: pnpm -F @jeraypop/api run predocs:build
+      - run: pnpm -F @jeraypop/docs run docs:build-mirror
       
       - name: Publish package
         run: |
           pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          pnpm -F @gkd-kit/docs publish --no-git-checks
+          pnpm -F @jeraypop/docs publish --no-git-checks
 
       - run: |
-          curl -X PUT 'https://registry-direct.npmmirror.com/@gkd-kit/docs/sync'
+          curl -X PUT 'https://registry-direct.npmmirror.com/@jeraypop/docs/sync'
           sleep 5
-          curl https://registry.npmmirror.com/@gkd-kit/docs/latest/files/package.json
+          curl https://registry.npmmirror.com/@jeraypop/docs/latest/files/package.json
 
       - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: gkd-docs
+          projectName: xpq-docs
           directory: ./docs/.vitepress/dist
